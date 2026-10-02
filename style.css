@@ -1,0 +1,1972 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==============================
+   BODY
+============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #87CEFA,
+        #F9A8D4,
+        #FFFFFF
+    );
+
+    background-size: 300% 300%;
+
+    animation: backgroundMove 10s ease infinite;
+
+    color: #333;
+
+    overflow-x: hidden;
+}
+
+
+/* Animasi background */
+
+@keyframes backgroundMove {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* ==============================
+   ELEMEN DEKORASI
+============================== */
+
+body::before,
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    z-index: -1;
+
+    animation: floating 6s ease-in-out infinite;
+
+}
+
+
+/* Lingkaran kiri */
+
+body::before {
+
+    top: 10%;
+    left: -60px;
+
+}
+
+
+/* Lingkaran kanan */
+
+body::after {
+
+    bottom: 10%;
+    right: -60px;
+
+    animation-delay: 2s;
+
+}
+
+
+/* Animasi melayang */
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+/* ==============================
+   CONTAINER
+============================== */
+
+.container {
+
+    width: 90%;
+
+    max-width: 850px;
+
+    margin: 50px auto;
+
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.93);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+
+    animation: containerAppear 1s ease;
+
+}
+
+
+/* Animasi muncul */
+
+@keyframes containerAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* ==============================
+   JUDUL
+============================== */
+
+h1 {
+
+    color: #2457a6;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+
+    animation: titleFloat 3s ease-in-out infinite;
+
+}
+
+
+/* Animasi judul */
+
+@keyframes titleFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+h2 {
+
+    color: #444;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ==============================
+   PARAGRAF
+============================== */
+
+p {
+
+    line-height: 1.7;
+
+}
+
+
+/* ==============================
+   MENU BUTTON
+============================== */
+
+.menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+}
+
+
+.button {
+
+    display: block;
+
+    width: 80%;
+
+    max-width: 420px;
+
+    padding: 16px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4facfe,
+            #00f2fe
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+
+}
+
+
+/* Hover tombol */
+
+.button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.25);
+
+}
+
+
+/* Saat tombol ditekan */
+
+.button:active {
+
+    transform:
+        scale(0.96);
+
+}
+
+
+/* ==============================
+   KARTU MATERI
+============================== */
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    margin: 20px 0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+
+    text-align: left;
+
+    transition: 0.3s;
+
+    animation: cardAppear 0.8s ease;
+
+}
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 1s;
+}
+
+.card:nth-child(7) {
+    animation-delay: 1.2s;
+}
+
+.card:nth-child(8) {
+    animation-delay: 1.4s;
+}
+
+.card:nth-child(9) {
+    animation-delay: 1.6s;
+}
+
+
+/* Hover kartu */
+
+.card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.18);
+
+}
+
+
+/* Animasi kartu */
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ==============================
+   ICON
+============================== */
+
+.icon {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+    animation:
+        iconBounce 2s infinite;
+
+}
+
+
+/* Animasi ikon */
+
+@keyframes iconBounce {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==============================
+   TOMBOL KEMBALI
+============================== */
+
+.back-button {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background: #667eea;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.back-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background: #4facfe;
+
+}
+
+
+/* ==============================
+   RESPONSIVE HP
+============================== */
+
+@media (max-width: 600px) {
+
+    .container {
+
+        width: 94%;
+
+        padding: 30px 20px;
+
+        margin: 25px auto;
+
+    }
+
+
+    h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    h2 {
+
+        font-size: 20px;
+
+    }
+
+
+    .button {
+
+        width: 95%;
+
+        font-size: 16px;
+
+    }
+
+}
+/* ==============================
+   PERAPIAN TEKS MATERI
+============================== */
+
+.card h2 {
+    text-align: center;
+    color: #2457a6;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    text-align: justify;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.container > p {
+    text-align: center;
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+
+/* Judul halaman */
+
+.container > h1 {
+    text-align: center;
+    line-height: 1.3;
+}
+
+
+/* Subjudul halaman */
+
+.container > h2 {
+    text-align: center;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* Membuat isi kartu lebih nyaman dibaca */
+
+.card {
+    text-align: left;
+}
+
+
+/* Ikon kartu tetap berada di tengah */
+
+.card .icon {
+    text-align: center;
+    display: block;
+}
+
+
+/* Jarak antar paragraf */
+
+.card p + p {
+    margin-top: 8px;
+}
+
+
+/* Tampilan pada HP */
+
+@media (max-width: 600px) {
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+}
+/* ==============================
+   SUBJUDUL MATERI
+============================== */
+
+.card h3 {
+    color: #2457a6;
+    font-size: 17px;
+    margin-top: 18px;
+    margin-bottom: 7px;
+    text-align: left;
+}
+
+.card h3:first-of-type {
+    margin-top: 5px;
+}
+
+
+/* Garis kecil dekorasi */
+
+.card h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        #4facfe,
+        #00f2fe
+    );
+    border-radius: 5px;
+    margin-top: 5px;
+}
+/* ==============================
+   QUIZ
+============================== */
+
+.quiz-container {
+    max-width: 800px;
+}
+
+
+/* Informasi soal */
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 25px 0 10px;
+
+    font-weight: bold;
+
+    color: #2457a6;
+}
+
+
+/* Progress */
+
+.progress-container {
+    width: 100%;
+    height: 12px;
+
+    background: #e5e5e5;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+}
+
+
+.progress-bar {
+    width: 10%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #4facfe,
+            #00f2fe
+        );
+
+    border-radius: 20px;
+
+    transition: width 0.5s ease;
+}
+
+
+/* Kartu pertanyaan */
+
+.question-card {
+    background: #f8fbff;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    animation: questionAppear 0.5s ease;
+}
+
+
+.question-card h2 {
+    color: #333;
+
+    font-size: 21px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+@keyframes questionAppear {
+
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+/* Pilihan jawaban */
+
+.answer-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.answer-button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 2px solid #d8e5f5;
+
+    border-radius: 15px;
+
+    background: white;
+
+    color: #333;
+
+    font-size: 16px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.answer-button:hover {
+    background: #eef8ff;
+
+    border-color: #4facfe;
+
+    transform: translateX(5px);
+}
+
+
+/* Jawaban benar */
+
+.answer-button.correct {
+    background: #d4edda;
+
+    border-color: #28a745;
+
+    color: #155724;
+
+    font-weight: bold;
+}
+
+
+/* Jawaban salah */
+
+.answer-button.wrong {
+    background: #f8d7da;
+
+    border-color: #dc3545;
+
+    color: #721c24;
+
+    font-weight: bold;
+}
+
+
+/* Tombol selanjutnya */
+
+.next-button {
+
+    margin-top: 25px;
+
+    padding: 14px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #667eea,
+            #764ba2
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.next-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+/* Hasil */
+
+.hasil {
+
+    animation:
+        containerAppear 0.8s ease;
+
+}
+
+
+.nilai-akhir {
+
+    font-size: 70px;
+
+    font-weight: bold;
+
+    color: #2457a6;
+
+    margin: 15px 0;
+
+    animation:
+        titleFloat 2s infinite;
+
+}
+
+
+#pesan-hasil {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin: 20px 0;
+
+}
+/* ==============================
+   FORM NAMA KUIS
+============================== */
+
+.form-nama {
+
+    animation:
+        containerAppear 0.8s ease;
+
+}
+
+
+.form-nama p {
+
+    margin: 20px 0;
+
+    color: #555;
+
+}
+
+
+#nama-siswa {
+
+    width: 80%;
+
+    max-width: 450px;
+
+    padding: 15px 20px;
+
+    border: 2px solid #d8e5f5;
+
+    border-radius: 30px;
+
+    outline: none;
+
+    font-size: 16px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+}
+
+
+#nama-siswa:focus {
+
+    border-color: #4facfe;
+
+    box-shadow:
+        0 0 12px rgba(79, 172, 254, 0.25);
+
+}
+
+
+#nama-siswa::placeholder {
+
+    color: #999;
+
+}
+/* ==============================
+   KHUSUS HALAMAN PETUNJUK
+============================== */
+
+.halaman-petunjuk {
+    text-align: center;
+}
+
+
+/* Judul kartu */
+
+.halaman-petunjuk .card h2 {
+    text-align: center;
+}
+
+
+/* Isi keterangan */
+
+.halaman-petunjuk .card p {
+    text-align: center;
+}
+
+
+/* Subjudul atau teks tebal */
+
+.halaman-petunjuk .card strong {
+    text-align: center;
+}
+
+
+/* Ikon */
+
+.halaman-petunjuk .icon {
+    text-align: center;
+}
+
+
+/* Tombol kembali */
+
+.halaman-petunjuk .back-button {
+    text-align: center;
+}
+/* =================================
+   BERANDA
+================================= */
+
+.home-container {
+    max-width: 850px;
+
+    padding-top: 45px;
+}
+
+
+/* Ikon komputer */
+
+.computer-icon {
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border-radius: 30px;
+
+    font-size: 65px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    animation:
+        computerFloat 3s ease-in-out infinite;
+
+}
+
+
+/* Animasi komputer */
+
+@keyframes computerFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Judul */
+
+.home-title {
+
+    margin-top: 15px;
+
+    margin-bottom: 5px;
+
+    font-size: 38px;
+
+    color: #2457a6;
+
+    animation:
+        titleAppear 0.8s ease;
+
+}
+
+
+.home-subtitle {
+
+    margin-top: 5px;
+
+    color: #555;
+
+    font-size: 25px;
+
+    animation:
+        titleAppear 1s ease;
+
+}
+
+
+.home-description {
+
+    max-width: 650px;
+
+    margin: 20px auto 35px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #555;
+
+}
+
+
+/* =================================
+   MENU
+================================= */
+
+.menu-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 20px;
+
+}
+
+
+/* Kartu menu */
+
+.menu-card {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 18px 22px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.1);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation:
+        menuAppear 0.7s ease;
+
+}
+
+
+/* Efek ketika mouse diarahkan */
+
+.menu-card:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.02);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.16);
+
+}
+
+
+/* Ikon menu */
+
+.menu-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef8ff,
+            #f1edff
+        );
+
+    border-radius: 18px;
+
+    font-size: 32px;
+
+    margin-right: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+/* Ikon ikut bergerak */
+
+.menu-card:hover .menu-icon {
+
+    transform:
+        rotate(-5deg)
+        scale(1.1);
+
+}
+
+
+/* Teks menu */
+
+.menu-text {
+
+    flex: 1;
+
+    text-align: left;
+
+}
+
+
+.menu-text h3 {
+
+    margin: 0 0 5px;
+
+    color: #2457a6;
+
+    font-size: 20px;
+
+}
+
+
+.menu-text p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* Panah */
+
+.menu-arrow {
+
+    font-size: 28px;
+
+    color: #667eea;
+
+    margin-left: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.menu-card:hover .menu-arrow {
+
+    transform:
+        translateX(8px);
+
+}
+
+
+/* =================================
+   FOOTER BERANDA
+================================= */
+
+.home-footer {
+
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(0, 0, 0, 0.08);
+
+    color: #666;
+
+    font-size: 14px;
+
+}
+
+
+.home-footer p {
+
+    margin: 5px;
+
+}
+
+
+/* =================================
+   ANIMASI MENU
+================================= */
+
+@keyframes menuAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+@keyframes titleAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+/* =================================
+   BACKGROUND ANIMASI
+================================= */
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* Lingkaran dekorasi */
+
+body::before,
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+}
+
+
+/* Lingkaran pertama */
+
+body::before {
+
+    top: -100px;
+
+    left: -100px;
+
+    background:
+        rgba(79, 172, 254, 0.18);
+
+    animation:
+        floatingCircle1 8s ease-in-out infinite;
+
+}
+
+
+/* Lingkaran kedua */
+
+body::after {
+
+    right: -100px;
+
+    bottom: -100px;
+
+    background:
+        rgba(118, 75, 162, 0.15);
+
+    animation:
+        floatingCircle2 10s ease-in-out infinite;
+
+}
+
+
+/* =================================
+   ANIMASI LINGKARAN
+================================= */
+
+@keyframes floatingCircle1 {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(40px, 50px)
+            scale(1.15);
+    }
+
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+}
+
+
+@keyframes floatingCircle2 {
+
+    0% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+    50% {
+        transform:
+            translate(-50px, -40px)
+            scale(1.2);
+    }
+
+    100% {
+        transform:
+            translate(0, 0)
+            scale(1);
+    }
+
+}
+/* =================================
+   EFEK KARTU
+================================= */
+
+.card,
+.profile-card,
+.question-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.card:hover,
+.profile-card:hover,
+.question-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.14);
+
+}
+/* =================================
+   ANIMASI IKON
+================================= */
+
+.icon {
+
+    display: inline-block;
+
+    animation:
+        iconFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes iconFloat {
+
+    0% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-6px);
+    }
+
+    100% {
+        transform:
+            translateY(0);
+    }
+
+}
+/* =================================
+   EFEK TOMBOL
+================================= */
+
+button,
+.back-button {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+button:hover,
+.back-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.15);
+
+}
+
+
+button:active,
+.back-button:active {
+
+    transform:
+        scale(0.96);
+
+}
+/* =====================================
+   HALAMAN MATERI INTERAKTIF
+===================================== */
+
+.materi-container {
+    text-align: center;
+}
+
+
+/* Deskripsi pembuka */
+
+.materi-pembuka {
+    max-width: 700px;
+    margin: 15px auto 30px;
+    line-height: 1.7;
+}
+
+
+/* Menu pilihan materi */
+
+.materi-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+
+/* Kartu materi */
+
+.materi-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border: none;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Efek ketika mouse diarahkan */
+
+.materi-card:hover {
+    transform: translateY(-5px) scale(1.01);
+
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Icon materi */
+
+.materi-icon {
+    min-width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #87CEFA,
+        #F9A8D4
+    );
+}
+
+
+/* Tulisan kartu */
+
+.materi-card strong {
+    display: block;
+
+    font-size: 17px;
+
+    color: #333;
+
+    margin-bottom: 5px;
+}
+
+
+.materi-card small {
+    display: block;
+
+    font-size: 14px;
+
+    color: #666;
+
+    line-height: 1.5;
+}
+
+
+/* Panah */
+
+.materi-panah {
+    margin-left: auto;
+
+    font-size: 25px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.materi-card:hover .materi-panah {
+    transform: translateX(6px);
+}
+
+
+/* =====================================
+   ISI MATERI
+===================================== */
+
+.isi-materi {
+
+    display: none;
+
+    max-width: 750px;
+
+    margin: 30px auto;
+
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    text-align: left;
+
+    animation: materiMuncul 0.5s ease;
+}
+
+
+@keyframes materiMuncul {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Header materi */
+
+.materi-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 2px solid #e5e7eb;
+}
+
+
+.materi-header span {
+
+    font-size: 40px;
+
+}
+
+
+.materi-header h2 {
+
+    margin: 0;
+
+    color: #333;
+
+}
+
+
+/* Judul kecil */
+
+.isi-materi h3 {
+
+    margin-top: 22px;
+
+    color: #555;
+
+}
+
+
+/* Paragraf */
+
+.isi-materi p {
+
+    line-height: 1.8;
+
+    color: #444;
+
+    text-align: justify;
+
+}
+
+
+/* Tombol tutup */
+
+.tutup-materi {
+
+    display: block;
+
+    margin: 30px auto 0;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #87CEFA,
+        #F9A8D4
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.tutup-materi:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =====================================
+   RESPONSIVE UNTUK HP
+===================================== */
+
+@media (max-width: 600px) {
+
+    .materi-card {
+
+        padding: 14px;
+
+        gap: 10px;
+
+    }
+
+
+    .materi-icon {
+
+        min-width: 45px;
+
+        height: 45px;
+
+        font-size: 24px;
+
+    }
+
+
+    .materi-card strong {
+
+        font-size: 15px;
+
+    }
+
+
+    .materi-card small {
+
+        font-size: 12px;
+
+    }
+
+
+    .materi-panah {
+
+        font-size: 20px;
+
+    }
+
+
+    .isi-materi {
+
+        padding: 20px;
+
+        margin: 20px 10px;
+
+    }
+
+
+    .materi-header {
+
+        gap: 10px;
+
+    }
+
+
+    .materi-header span {
+
+        font-size: 32px;
+
+    }
+
+
+    .materi-header h2 {
+
+        font-size: 20px;
+
+    }
+
+}
+/* ============================= */
+/* MEMBUAT SEMUA TULISAN PROFIL RATA TENGAH */
+/* ============================= */
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card * {
+    text-align: center;
+}
+
+.profile-card p {
+    line-height: 1.7;
+}
+
+.profile-card h2,
+.profile-card h3,
+.profile-card strong {
+    text-align: center;
+}
+
+.profile-card .profile-icon {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Membuat penjelasan pada halaman profil berada di tengah */
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card p {
+    text-align: center;
+    line-height: 1.8;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-card h2,
+.profile-card h3 {
+    text-align: center;
+}
+/* ============================= */
+/* PERBAIKAN TULISAN PROFIL */
+/* ============================= */
+
+.profile-card {
+    text-align: center !important;
+}
+
+.profile-card p {
+    text-align: center !important;
+    line-height: 1.8;
+}
+
+.profile-card h2,
+.profile-card h3 {
+    text-align: center !important;
+}
+
+.profile-card strong {
+    text-align: center !important;
+}
+
+.profile-card div {
+    text-align: center !important;
+}
+/* ============================= */
+/* HALAMAN PROFIL - SEMUA TULISAN TENGAH */
+/* ============================= */
+
+.profile-card,
+.card {
+    text-align: center !important;
+}
+
+.profile-card p,
+.card p {
+    text-align: center !important;
+    line-height: 1.8;
+}
+
+.profile-card h2,
+.card h2 {
+    text-align: center !important;
+}
+
+.profile-card .icon,
+.card .icon {
+    text-align: center !important;
+}

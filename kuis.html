@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Kuis Komputer Kelas IX</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+    <div class="container quiz-container">
+
+
+        <!-- =========================
+             FORM NAMA
+        ========================== -->
+
+        <div id="form-nama" class="form-nama">
+
+            <div class="icon">👋</div>
+
+            <h1>Kuis Komputer</h1>
+
+            <h2>Kelas IX SMP</h2>
+
+            <p>
+                Sebelum memulai kuis,
+                silakan masukkan nama kamu.
+            </p>
+
+            <input
+                type="text"
+                id="nama-siswa"
+                placeholder="Masukkan nama kamu"
+                autocomplete="off">
+
+            <br>
+
+            <button
+                class="next-button"
+                onclick="mulaiKuis()">
+
+                🚀 Mulai Kuis
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             BAGIAN KUIS
+        ========================== -->
+
+        <div id="bagian-kuis" style="display: none;">
+
+            <div class="icon">📝</div>
+
+            <h1>Kuis Komputer</h1>
+
+            <h2>Kelas IX SMP</h2>
+
+            <p>
+                Halo, <strong id="nama-tampil"></strong>!
+                Jawablah setiap pertanyaan dengan teliti.
+            </p>
+
+
+            <!-- INFORMASI SOAL -->
+
+            <div class="quiz-info">
+
+                <span id="nomor-soal">
+                    Soal 1 dari 10
+                </span>
+
+                <span id="nilai-sementara">
+                    Nilai: 0
+                </span>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div
+                    class="progress-bar"
+                    id="progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- PERTANYAAN -->
+
+            <div class="question-card">
+
+                <h2 id="pertanyaan">
+                    Pertanyaan akan muncul di sini.
+                </h2>
+
+                <div
+                    id="pilihan-jawaban"
+                    class="answer-container">
+                </div>
+
+            </div>
+
+
+            <!-- TOMBOL -->
+
+            <button
+                id="next-button"
+                class="next-button"
+                onclick="soalBerikutnya()">
+
+                Selanjutnya →
+
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             HASIL KUIS
+        ========================== -->
+
+        <div
+            id="hasil"
+            class="hasil"
+            style="display: none;">
+
+            <div class="icon">
+                🏆
+            </div>
+
+            <h1>Kuis Selesai!</h1>
+
+            <h2>
+                Selamat,
+                <span id="nama-hasil"></span>!
+            </h2>
+
+            <p>
+                Kamu telah menyelesaikan semua soal.
+            </p>
+
+            <p>
+                Nilai kamu:
+            </p>
+
+            <div
+                id="nilai-akhir"
+                class="nilai-akhir">
+
+                0
+
+            </div>
+
+            <p id="pesan-hasil"></p>
+
+
+            <button
+                class="next-button"
+                onclick="ulangKuis()">
+
+                🔄 Ulangi Kuis
+
+            </button>
+
+            <br>
+
+            <a
+                href="../index.html"
+                class="back-button">
+
+                ← Menu Utama
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>
